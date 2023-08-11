@@ -40,13 +40,21 @@ async function main() {
     "X-qubic-sign": sig,
   };
 
+  console.log({
+    apiKey: YOUR_API_KEY,
+    sig,
+    msg,
+  });
+
   const result = await request({
     url,
     document,
     requestHeaders,
   });
 
-  console.log(result);
+  console.log({
+    result,
+  });
 }
 
 main();
